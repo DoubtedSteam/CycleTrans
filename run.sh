@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 ~/anaconda3/envs/torch_1.10/bin/python train.py --cfg ./configs/RegDB.yml
