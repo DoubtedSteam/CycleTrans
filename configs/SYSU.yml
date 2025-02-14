@@ -1,0 +1,42 @@
+prefix: run0
+
+fp16: true
+rerank: false
+port: 12356
+
+# dataset
+sample_method: group_sampler
+image_size: (384, 192)
+p_size: 8 #id_num
+k_size: 8 #num per id
+dataset: sysu
+
+# loss
+classification: true
+adaptive_triplet: false
+triplet: true
+ap: false
+center: false
+MMD: true
+MMDmargin: false
+MMDFC: false
+# parameters
+margin: 0.3
+p: 0.0
+# architecture
+drop_last_stride: true
+label_smooth: false
+finegrained: true
+prototype_num: 1024
+
+# optimizer
+lr: 0.00035
+optimizer: adam
+num_epoch: 140
+lr_step: [41, 81]
+warmup: 10
+
+# log
+log_period: 50
+start_eval: 5
+eval_interval: 10
